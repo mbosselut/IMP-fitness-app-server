@@ -35,6 +35,7 @@ const User = db.define('user',{
        Category.belongsTo(User)  
        Category.belongsTo(Calendar)  
        Workout.belongsTo(Calendar)
+       Workout.belongsTo(Category)
        
        Calendar.hasMany(Workout)
       User.hasOne(Category)
