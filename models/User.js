@@ -1,6 +1,9 @@
 const Sequelize = require('sequelize')
 const db = require('../db')
 const Category = require('./Category')
+const Calendar = require('./Calendar')
+const Workout = require('./Workout')
+
 
 
 const User = db.define('user',{
@@ -13,7 +16,7 @@ const User = db.define('user',{
         allowNull: false
       },
     picture: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         allowNull: false
       },
     email: {
@@ -30,7 +33,10 @@ const User = db.define('user',{
       })
 
        Category.belongsTo(User)  
-
+       Category.belongsTo(Calendar)  
+       Workout.belongsTo(Calendar)
+       
+       Calendar.hasMany(Workout)
       User.hasOne(Category)
     
 module.exports = User
