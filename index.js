@@ -18,7 +18,6 @@ app.use(jsonMiddleware);
 
 app.listen(port, () => console.log(`Server listening on port ${port}...`));
 
-
 //----------------USER ROUTES-------------------//
 app.get("/user/:userId", (req, res, next) => {
   User.findOne({ where: { id: req.params.userId } })
@@ -43,6 +42,15 @@ app.post("/user", (req, res, next) => {
 //     .catch(next);
 // });
 
+//----------------CALENDAR ROUTES-------------------//
+app.get('/calendar', (req,res, next) => {
+    Calendar.findAll()
+        .then(calendar => {
+            res.json(calendar);
+        })
+        .catch(next)
+})
+
 // PUT route once a user has completed a workout
 app.put("/:userId/calendar/:day", (req, res, next) => {
   Calendar.findOne({
@@ -66,19 +74,11 @@ app.put("/:userId/calendar/:day", (req, res, next) => {
   });
 });
 
-//----------------CALENDAR ROUTES-------------------//
-app.get('/calendar', (req,res, next) => {
-    Calendar.findAll()
-        .then(calendar => {
-            res.json(calendar);
-        })
-        .catch(next)
-})
-
+//----------------WORKOUT ROUTES-------------------//
 app.get('/workout', (req,res, next) => {
-    Calendar.findAll()
-        .then(calendar => {
-            res.json(calendar);
+    Workout.findAll()
+        .then(workout => {
+            res.json(workout);
         })
         .catch(next)
 })
