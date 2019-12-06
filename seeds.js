@@ -8,7 +8,7 @@ db.sync({ force: false }).then(() => {
     where: {}
   }),
     Workout.create({
-      id3: 1,
+      id: 1,
       title: "Stretching",
       videoUrl:
         "https://imptrainer.com/wp-content/uploads/2019/11/15-Minuti-Di-Esercizi-Per-Tonificare-Gli-Addominali.mp4",
