@@ -7,14 +7,14 @@ const Category = require("./models/Category");
 const Calendar = require("./models/Calendar");
 const Workout = require("./models/Workout");
 
-const port = 4000;
+const port = process.env.PORT || 4000;
 const corsMiddleware = cors();
 const jsonMiddleware = bodyParser.json();
 
 app.use(corsMiddleware);
 app.use(jsonMiddleware);
 
-//require("./seeds");
+require("./seeds");
 
 app.listen(port, () => console.log(`Server listening on port ${port}...`));
 
