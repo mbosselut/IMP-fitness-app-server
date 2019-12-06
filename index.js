@@ -34,7 +34,6 @@ app.post("/user", (req, res, next) => {
     .catch(next);
 });
 
-
 // app.post("/category", (req, res, next) => {
 //   let data = req.body;
 //   Category.create(data)
