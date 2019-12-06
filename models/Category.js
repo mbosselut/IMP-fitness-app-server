@@ -7,7 +7,7 @@ const Category = db.define('category',{
         type: Sequelize.STRING,
         allowNull: false
       },
-    levelnumber: {
+    levelNumber: {
         type: Sequelize.INTEGER,
         allowNull: false
       },
