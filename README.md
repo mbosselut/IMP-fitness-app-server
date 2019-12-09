@@ -7,7 +7,9 @@ The back-end can be ran locally (port 4000 is currently selected), but is also d
 The server needs an empty PostgreSQL docker container running on port 5432 and with the password 'secret'.
 
 Local installation and setup through `git clone`, `npm install`, `node index.js`.
-The seeds.js file (currently commented out in index.js) will create a new user, a 21-day calendar and 5 different workouts on a new database.
+
+### Seeding the DB
+The database can be seeded the first time by uncommenting the `require("./seeds")` line in index.js. The seeds will create a new user, a 21-day calendar and 5 different workouts on a new database.
 
 ##  Models
 
@@ -22,10 +24,11 @@ The seeds.js file (currently commented out in index.js) will create a new user, 
 Method | Path | Role
 ------------ | -------------| -------------
 GET | /user/:userId | Get a single user
-POST | /user | Create a new user
+POST | /user | Create a new user*
 GET | /calendar | Get full program calendar
-PUT | /:userId/calendar/:day | Pushing a :userId to the array of 'Completed users' for a specific :day. No body required
+PUT | /:userId/calendar/:day | Pushing a :userId to the array of 'Completed users' for a specific :day*
 GET | /workout | Get full list of workouts
+*These routes are implemented on the back-end, but not yet used in the front-end section.
 
 ## Features to be implemented
 * Authentication
