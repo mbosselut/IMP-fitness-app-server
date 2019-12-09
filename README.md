@@ -4,7 +4,7 @@ Back-end for the IMP trainer application. The client repository can be found [he
 ## Set-up
 
 The back-end can be ran locally (port 4000 is currently selected), but is also deployed online at https://radiant-ocean-32463.herokuapp.com/ 
-The server needs an empty PostgeSQL database running on port 5432 and with the password 'secret'.
+The server needs an empty PostgreSQL docker container running on port 5432 and with the password 'secret'.
 
 Local installation and setup through `git clone`, `npm install`, `node index.js`.
 The seeds.js file (currently commented out in index.js) will create a new user, a 21-day calendar and 5 different workouts on a new database.
