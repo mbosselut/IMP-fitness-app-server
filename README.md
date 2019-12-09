@@ -24,7 +24,7 @@ Method | Path | Role
 GET | /user/:userId | Get a single user
 POST | /user | Create a new user
 GET | /calendar | Get full program calendar
-PUT | /:userId/calendar/:day | Pushing a user's ID to the array of 'Completed users' for a specific day
+PUT | /:userId/calendar/:day | Pushing a :userId to the array of 'Completed users' for a specific :day. No body required
 GET | /workout | Get full list of workouts
 
 ## Features to be implemented
