@@ -1,6 +1,5 @@
 const Sequelize = require("sequelize");
 const db = require("../db");
-const Category = require("./Category");
 const Calendar = require("./Calendar");
 const Workout = require("./Workout");
 

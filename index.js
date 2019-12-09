@@ -3,7 +3,6 @@ const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const User = require("./models/User");
-const Category = require("./models/Category");
 const Calendar = require("./models/Calendar");
 const Workout = require("./models/Workout");
 
@@ -14,7 +13,7 @@ const jsonMiddleware = bodyParser.json();
 app.use(corsMiddleware);
 app.use(jsonMiddleware);
 
-require("./seeds");
+//require("./seeds");
 
 app.listen(port, () => console.log(`Server listening on port ${port}...`));
 
@@ -33,13 +32,6 @@ app.post("/user", (req, res, next) => {
     .then(user => res.json(user))
     .catch(next);
 });
-
-// app.post("/category", (req, res, next) => {
-//   let data = req.body;
-//   Category.create(data)
-//     .then(category => res.json(category))
-//     .catch(next);
-// });
 
 //----------------CALENDAR ROUTES-------------------//
 app.get('/calendar', (req,res, next) => {
