@@ -1,5 +1,7 @@
 # my-imp-trainer-server
-Back-end for the IMP trainer application. The client repository can be found [here](https://github.com/Official-Codaisseur-Graduate/my-imp-trainer). Built with NodeJS and PosgreSQL through Sequelize.
+Back-end for the IMP trainer application. The client repository can be found [here](https://github.com/mbosselut/IMP-fitness-app-client/). Built with NodeJS and PosgreSQL through Sequelize.
+- The frontend repository can be found [here](https://github.com/mbosselut/IMP-fitness-app-client/). 
+
 
 ## Set-up
 
@@ -30,8 +32,8 @@ PUT | /:userId/calendar/:day | Pushing a :userId to the array of 'Completed user
 GET | /workout | Get full list of workouts
 *These routes are implemented on the back-end, but not yet used in the front-end section.
 
-## Features to be implemented
-* Authentication
-* Signing up
-* Calculate streak of the user (how many days in the row has he/she been completing workouts)
-* Alongside front-end : adding user weight and height to user profile, to calculate calories burned
+## Contributors : 
+- Manon Bosselut
+- Eslam Haridy
+- Hakan Kemal
+- Alexandra Pavlushina
