@@ -1,7 +1,5 @@
 # my-imp-trainer-server
 Back-end for the IMP trainer application. The client repository can be found [here](https://github.com/mbosselut/IMP-fitness-app-client/). Built with NodeJS and PosgreSQL through Sequelize.
-- The frontend repository can be found [here](https://github.com/mbosselut/IMP-fitness-app-client/). 
-
 
 ## Set-up
 
